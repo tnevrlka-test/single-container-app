@@ -2,8 +2,8 @@
 
 ## Build containerized app using the App Studio Build Infrastructure 
 
-This demo shows a simple container based app can easily be bootstrapped onto an openshift cluster.
-This application runs a simple node.js server and serves up HTML pages. 
+This repo contains a a simple container based app that can be built on a bootstrapped App Studio build environment.
+The application itself can run and shows a simple web page with these same instructions using a simple node.js server to serve up HTML pages. 
 
 Try it out by cloning `https://github.com/redhat-appstudio/infra-deployments.git`  and setting up your cluster to run the build pipeline.
  
