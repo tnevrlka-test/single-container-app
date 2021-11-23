@@ -1,5 +1,5 @@
 {
-  "name": "simple-demo-app",
+  "name": "single-container-app",
   "version": "1.0.0",
   "description": "This application has a simple dockerfile which containers node.js web server.",
   "main": "app.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jduimovich/simple-app.git"
+    "url": "git+https://github.com/jduimovich/single-container-app"
   },
   "author": "",
   "license": "Apache 2.0",
   "bugs": {
-    "url": "https://github.com/jduimovich/simple-app/issues"
+    "url": "https://github.com/jduimovich/single-container-app/issues"
   },
-  "homepage": "https://github.com/jduimovich/simple-app",
+  "homepage": "https://github.com/jduimovich/single-container-app",
   "dependencies": {
     "express": "^4.17.1"
   }
