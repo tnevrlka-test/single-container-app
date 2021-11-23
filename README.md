@@ -9,9 +9,12 @@ Try it out by forking this demo or use your own container based application.
  
 | Step    |    |
 | ----------- | ----------- |
-| 1. Get a sandbox account at https://developers.redhat.com/developer-sandbox      | ![OpenShift Sandbox Account](images/sandbox.png)       |
-| 2. Add the OpenShift Workflow in the Actions tab of in your GitHub repository.   | ![OpenShift Workflow](images/workflow.png)         |
-| 3. Fill in the details for each of the necessary components. Each edit location is marked with  a  ⬇️ so you can easily find and configure the workflow.       | ![destination](images/editconfig.png).    | 
-| 4. Push your changes and watch it build and deploy to your cluster.     |    ![running](images/running.png).        |
+| 1.  Bootstrap your cluster    |  hack/bootstrap.sh    |
+| 2.  Create project for your pipelines execution    |  oc new-project demo     |
+| 3. Install Pipelines       | ./components/build/hack/test-known-build.sh | 
+| 4. Test Pipelines     |   ./components/build/hack/test-known-build.sh URL      |
+| 5.  Run your own  build     |  ./components/build/hack/build.sh  https://github.com/jduimovich/single-container-app       |
+| 6.  login to openshift     |  view pipelineruns  |
  
+
 
