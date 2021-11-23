@@ -5,7 +5,7 @@
 This demo shows a simple container based app can easily be bootstrapped onto an openshift cluster.
 This application runs a simple node.js server and serves up HTML pages. 
 
-Try it out by forking this demo or use your own container based application.
+Try it out by cloning `https://github.com/redhat-appstudio/infra-deployments.git`  and setting up your cluster to run the build pipeline.
  
 | Step    |    |
 | ----------- | ----------- |
