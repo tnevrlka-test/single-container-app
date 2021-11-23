@@ -50,23 +50,29 @@
         Learn more about App Studio
       </button>
     </a>  
-
-    <p class="w3-xlarge">We're super awesome  </p> 
   </header>
 
   <div class="w3-row-padding w3-padding-64 w3-container">
     <div class="w3-content"> 
         <h1 id="summary">Try <menu type="context"></menu> </h1> 
         <ol class="w3-xlarge">
-          <li> Bootstrap your cluster  
+          <li> Bootstrap your cluster 
+            <pre> hack/bootstrap.sh </pre> 
           </li>
-          <li> Switch to Dev Mode  
+          <li> Create a branch (optional)
+            <pre> git checkout -b demo </pre> 
           </li>
-          <li>
-              Run a build 
+          <li> Install Pipelines 
+            <pre>./components/build/hack/install-pipelines.sh</pre>
           </li>
-          <li>
-             Profit 
+          <li> Test Pipelines 
+            <pre>./components/build/hack/test-known-build.sh </pre>
+          </li>
+          <li> Run your own container build
+            <pre> ./components/build/hack/test-known-build.sh URL</pre>
+            <pre>./components/build/hack/build.sh  https://github.com/jduimovich/single-con
+              tainer-app</pre>
+            
           </li>
         </ol> 
 
