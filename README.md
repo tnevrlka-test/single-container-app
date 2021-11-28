@@ -14,7 +14,7 @@ Try it out by cloning `https://github.com/redhat-appstudio/infra-deployments.git
 | 3.  Run build on this repo.     |  ./components/build/hack/build.sh  https://github.com/jduimovich/single-container-app       |
 
 
-Login to openshift to view pipelineruns.
+Login to openshift to view pipelineruns. You may also use the tkn cli to see log `tkn.exe pipelinerun logs`
  
 
 
