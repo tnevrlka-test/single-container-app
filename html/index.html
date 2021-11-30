@@ -38,8 +38,7 @@
     <i class="fab fa-redhat fa-5x "></i>
     <h1 class="w3-margin w3-jumbo">App Studio Demo Build</h1>
     <p class="w3-xlarge">Use App Studio Build Pipelines to Build your Container</p>
-    <p class="w3-xlarge">Be Happy 
-    </p>
+   
 
     <p class="w3-xlarge">
       This application can be built using the App Studio default Build Pipelines 
@@ -61,24 +60,16 @@
           </li>
           <li> Create project for your pipelines execution 
              <pre> oc new-project demo </pre> 
-          </li>
-          <li> Install Pipelines 
-            <pre>./components/build/hack/install-pipelines.sh</pre>
-          </li>
-          <li> Test Pipelines 
-            <pre>./components/build/hack/test-known-build.sh </pre>
-          </li>
-          <li> Run your own container build
-            <pre> ./components/build/hack/test-known-build.sh URL</pre>
-            <pre>./components/build/hack/build.sh  https://github.com/jduimovich/single-container-app</pre>
-            
+          </li>  
+          <li> Run this repos container build 
+            <pre>./hack/build/build.sh https://github.com/jduimovich/single-container-app</pre> 
           </li>
         </ol> 
 
         <p class="w3-xlarge"></p>
         <a href="https://github.com/jduimovich/single-container-app" target="_blank">
           <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">
-            Check out the completed code here !
+            Browse the code here !
           </button>
         </a>
         </p>
