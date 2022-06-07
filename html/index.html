@@ -29,6 +29,23 @@
   .fa-coffee {
     font-size: 200px
   }
+
+  .column {
+    float: left;
+    width: 80%;
+    text-align: center;
+  }
+  .columnr {
+    float: right;
+    width: 20%;
+    text-align: center;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 </style>
 
 <body>
@@ -36,49 +53,92 @@
   <!-- Header -->
   <header class="w3-container w3-red w3-center" style="padding:64px 16px">
     <i class="fab fa-redhat fa-5x "></i>
-    <h1 class="w3-margin w3-jumbo">App Studio Demo Build</h1>
-    <p class="w3-xlarge">Use App Studio Build Pipelines to Build your Container</p>
-   
+    <h1 class="w3-margin w3-jumbo">App Studio Demo Application</h1>
+    <p class="w3-xlarge">Use App Studio to Build your Application</p>
+
 
     <p class="w3-xlarge">
-      This application can be built using the App Studio default Build Pipelines 
+      This application is a standard Node.js HTTP application packaged into a single container.
     </p>
+
 
     <a href="https://github.com/redhat-appstudio/infra-deployments.git" target="_blank">
       <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">
         Learn more about App Studio
       </button>
-    </a>  
+    </a>
+     
+    <p class="w3-xlarge"> 
+      Demo-palooza! Run this and more using a script launcher found here
+      <a href="https://github.com/jduimovich/appstudio-e2e-demos" target="_blank">
+        https://github.com/jduimovich/appstudio-e2e-demos</a> 
+        <br>
+      <a href="https://github.com/jduimovich/appstudio-e2e-demos" target="_blank">
+        <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">
+          Automatically run the demos from your CLI.
+        </button> 
+    
+      </a>
+    </p>
+  
   </header>
 
-  <div class="w3-row-padding w3-padding-64 w3-container">
-    <div class="w3-content"> 
-        <h1 id="summary">Try <menu type="context"></menu> </h1> 
-        <ol class="w3-xlarge">
-          <li> Bootstrap your cluster 
-            <pre> hack/bootstrap.sh </pre> 
-          </li>
-          <li> Create project for your pipelines execution 
-             <pre> oc new-project demo </pre> 
-          </li>  
-          <li> Run this repos container build 
-            <pre>./hack/build/build.sh https://github.com/jduimovich/single-container-app</pre> 
-          </li>
-        </ol> 
 
-        <p class="w3-xlarge"></p>
-        <a href="https://github.com/jduimovich/single-container-app" target="_blank">
-          <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">
-            Browse the code here !
-          </button>
-        </a>
-        </p>
-      </div>  
+  <div class="w3-row-padding w3-padding-64 w3-container ">
+    <div class="w3-content  ">
+ 
+          <h1 >Try </h1> 
+
+     
+
+      <ol class="w2-xlarge">
+        <li> Bootstrap your cluster from <a href="https://github.com/redhat-appstudio/infra-deployments.git"
+            target="_blank">
+            https://github.com/redhat-appstudio/infra-deployments
+          </a>
+          <pre> ./hack/bootstrap.sh </pre>
+        </li>
+        <div class="row">
+          <li> Create an Application and a Component </li>
+          <pre>
+    apiVersion: appstudio.redhat.com/v1alpha1
+    kind: Application
+    metadata:
+      name: single-container-app
+    spec:
+      description: "single-container-app built in App Studio"
+      displayName: single-container-app 
+    </pre>
+
+          <pre>
+    apiVersion: appstudio.redhat.com/v1alpha1
+    kind: Component
+    metadata:
+      name: single-container-app
+    spec:
+      componentName: single-container-app
+      application: single-container-app
+      containerImage: quay.io/jduimovich0/single-container-app
+      source:
+        git:
+          url: https://github.com/jduimovich/single-container-app
+          devfileUrl: https://raw.githubusercontent.com/jduimovich/appstudio-e2e-demos/main/demos/single-container-app/devfiles/devfile.yaml
+      build:
+        containerImage: quay.io/jduimovich0/single-container-app
+    </pre>
+
+          <li> Navigate to the topology viewer and your app will be running in your namespace.
+          </li> 
+      </ol>
+
+      
+
+    </div>
   </div>
 
   <!-- Footer -->
   <footer class="w3-container w3-padding-64 w3-center w3-opacity">
-    
+
     <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
   </footer>
 
