@@ -8,9 +8,11 @@ You can use the default managed stone soup environment with CLI access or you ca
 
 Skip steps 1 and 2 if you are using a staging or managed stone soup instance
   
-  1.  Bootstrap your cluster       `./hack/bootstrap-cluster.sh preview  `
-  2.  Create a project for your app `oc new-project demo`  
+  1.  Bootstrap your cluster using       `./hack/bootstrap-cluster.sh preview  `
+  2.  Create a project for your app. `oc new-project demo`  
   
+If you are using a managed stone soup install start here. 
+
   3.  Create an Application with the following yaml 
 ```
 apiVersion: appstudio.redhat.com/v1alpha1
