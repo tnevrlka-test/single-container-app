@@ -2,6 +2,8 @@
 # https://hub.docker.com/_/node 
 FROM node 
 
+break build
+
 # Create and change to the app directory.
 WORKDIR /usr/src/app
 
